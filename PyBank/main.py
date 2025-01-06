@@ -6,8 +6,8 @@ import csv
 import os
 
 # Files to load and output (update with correct file paths)
-file_to_load = os.path.join("PyBank\Resources\\budget_data.csv")  # Input file path
-file_to_output = os.path.join("PyBank\\analysis\\budget_analysis.txt")  # Output file path
+file_to_load = os.path.join("Resources" ,"budget_data.csv")  # Input file path
+file_to_output = os.path.join("analysis" , "budget_analysis.txt")  # Output file path
 
 # Define variables to track the financial data
 total_months = 0
@@ -18,8 +18,7 @@ previous_profit = None
 greatest_increase = {"date": None, "amount": float('-inf')}
 greatest_decrease = {"date": None, "amount": float('inf')}
 
-# Ensure output folder exists
-os.makedirs(os.path.dirname(file_to_output), exist_ok=True)
+
 
 # Open and read the CSV file
 with open(file_to_load) as financial_data:
